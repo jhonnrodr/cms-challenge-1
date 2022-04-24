@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const app = express();
+require('dotenv').config();
 
 app.use(express.json());
 app.use(cors());
