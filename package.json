@@ -1,0 +1,28 @@
+{
+  "name": "cms-challenge-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "serve": "npm run serve --prefix client",
+    "dev": "concurrently \"npm run serve\" \"npm run start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhonnrodr/cms-challenge-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhonnrodr/cms-challenge-2/issues"
+  },
+  "homepage": "https://github.com/jhonnrodr/cms-challenge-2#readme",
+  "dependencies": {
+    "concurrently": "^7.1.0",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
