@@ -1,5 +1,5 @@
 <template>
- <div class="overflow-x-hidden bg-gray-100">
+<div class="overflow-x-hidden bg-gray-100">
     <nav class="px-6 py-4 bg-white shadow">
         <div class="container flex flex-col mx-auto md:flex-row md:items-center md:justify-between">
             <div class="flex items-center justify-between">
@@ -24,43 +24,15 @@
     </nav>
      <div class="px-6 py-8">
         <div class="container  mx-auto">
-            <div class="w-full">
-                <div class="">
-                    <h1 class="text-xl font-bold text-gray-700 md:text-2xl">Post</h1>
-                </div>
-                <post-list :post="post" v-for="post in posts" :key="post._id"></post-list>
-            </div>
+            <main>
+            <slot />
+            </main>
         </div>
      </div>
     </div>
 </template>
-
 <script>
-import PostList from '../components/PostList.vue'
-import axios from 'axios'
 export default {
-  name: 'HomeView',
-  components: {
-    PostList
-  },
-    data() {
-        return {
-            posts: []
-        }
-    },
-    mounted() {
-        this.getPosts()
-    },
-    methods: {
-        getPosts() {
-            axios.get('/api/posts')
-                .then(response => {
-                    this.posts = response.data
-                })
-                .catch(error => {
-                    console.log(error)
-                })
-        }
-    }
+    name: 'LayoutBlog'
 }
 </script>
