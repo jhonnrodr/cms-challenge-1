@@ -5,9 +5,9 @@
             <span class="font-light text-gray-600">{{post.date | formatDate}}</span>
         </div>
         <div class="mt-2 text-left">
-            <a href="#" class="text-2xl font-bold text-gray-700 hover:underline">
+            <router-link :to="{name: 'post', params: {id: post._id}}" class="text-2xl font-bold text-gray-700 hover:underline">
                 {{post.title}}
-            </a>
+            </router-link>
         <p class="mt-2 text-gray-600">
             {{post.description}}
         </p>

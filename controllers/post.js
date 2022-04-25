@@ -35,11 +35,26 @@ const createPost =  async (req, res) => {
 }
 
 const updatePost =  async (req, res) => {
-    res.send(req.body);
+    try {
+        const post = await Post.findByIdAndUpdate(req.params.id, {
+            $set: {
+                title: req.body.title,
+                description: req.body.description,
+            }
+        });
+        res.json(post);
+    } catch (error) {
+        res.json({ message: error.message });
+    }
 }
 
 const deletePost =  async (req, res) => {
-    res.send(req.params.id);
+   try {
+       const post = await Post.findByIdAndDelete(req.params.id);
+        res.json(post);
+   } catch (error) {
+        res.json({ message: error.message });
+   }
 }
 
 module.exports = {
