@@ -1,5 +1,7 @@
+const post = require('../models/post');
+
 const getPosts =  async (req, res) => {
-    res.send('get posts');
+    res.json(post);
 }
 
 const getPost =  async (req, res) => {
