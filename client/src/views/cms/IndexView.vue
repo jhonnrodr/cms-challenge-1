@@ -23,12 +23,17 @@
     </nav>
      <div class="px-6 py-8">
         <div class="container  mx-auto">
+            <create-post></create-post>
         </div>
      </div>
     </div>
 </template>
 <script>
+import CreatePost from '../../components/CreatePost.vue'
 export default {
     name: 'IndexView',
+    components: {
+        CreatePost
+    }
 }
 </script>

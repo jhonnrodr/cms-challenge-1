@@ -20,7 +20,7 @@
 </template>
 <script>
 export default {
-    name: 'PostList',
+    name: 'PostBlog',
     props: ['post'],
     components: {
     }

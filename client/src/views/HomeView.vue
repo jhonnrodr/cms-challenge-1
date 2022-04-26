@@ -4,19 +4,19 @@
         <div class="">
             <h1 class="text-xl font-bold text-gray-700 md:text-2xl">Post</h1>
         </div>
-        <post-list :post="post" v-for="post in posts" :key="post._id"></post-list>
+        <post-blog :post="post" v-for="post in posts" :key="post._id"></post-blog>
     </div>
 </layout-blog>
 </template>
 
 <script>
-import PostList from '../components/PostList.vue'
+import PostBlog from '../components/PostBlog.vue'
 import axios from 'axios'
 import LayoutBlog from '../shared/LayoutBlog.vue'
 export default {
   name: 'HomeView',
   components: {
-    PostList,
+    PostBlog,
     LayoutBlog
   },
     data() {
